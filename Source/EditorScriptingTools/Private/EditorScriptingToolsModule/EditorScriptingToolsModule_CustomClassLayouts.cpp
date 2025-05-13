@@ -110,12 +110,8 @@ bool FEditorScriptingToolsModule::CanRegisterCustomClassLayoutClass(UClass* Cust
 	const FPropertyEditorModule& PropertyModule = FModuleManager::LoadModuleChecked<FPropertyEditorModule>("PropertyEditor");
 
 	return
-//++CK
-		//RegisteredCustomDetailLayouts.FindKey(CustomizedClassInfo) == nullptr &&
-		//!PropertyModule.GetClassNameToDetailLayoutNameMap().Contains(CustomizedClass->GetFName());
-
-		RegisteredCustomDetailLayouts.FindKey(CustomizedClassInfo) == nullptr;
-//--CK
+		RegisteredCustomDetailLayouts.FindKey(CustomizedClassInfo) == nullptr &&
+		!PropertyModule.GetClassNameToDetailLayoutNameMap().Contains(CustomizedClass->GetFName());
 }
 
 bool FEditorScriptingToolsModule::CanRegisterDetailCustomizationUtilityBlueprint(const UDetailCustomizationUtilityBlueprint* DetailCustomizationBlueprint) const
@@ -189,4 +185,4 @@ void FEditorScriptingToolsModule::UnregisterInvalidClassesLayouts()
 	}
 }
 
-#undef LOCTEXT_NAMESPACE
+#undef LOCTEXT_NAMESPACE	

@@ -177,8 +177,6 @@ bool FEditorScriptingToolsModule::CanRegisterEditorScriptingUtility(const IEdito
 	case EEditorScriptingUtilityType::UserDefinedActions: return CanRegisterEditorUserDefinedActions(CastChecked<UEditorUserDefinedActions>(ScriptingUtilityAsset));
 	default: ensureMsgf(false, TEXT("This utility type is not handled!")); return false;
 	}
-
-	return false;
 }
 
 
