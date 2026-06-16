@@ -173,7 +173,7 @@ FReply FEditorScriptingUtilityBlueprintDetails::OnRegisterButton_Clicked(bool bR
 		{
 			ScriptingToolsModule->UnregisterEditorScriptingUtility(UtilityBlueprint);
 		}
-		FReply::Handled();
+		return FReply::Handled();
 	}
 	return FReply::Unhandled();
 }
