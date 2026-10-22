@@ -21,7 +21,7 @@
 #include "Internationalization/TextPackageNamespaceUtil.h"
 #include "ScopedTransaction.h"
 #include "UObject/PropertyIterator.h"
-#include "Engine/UserDefinedStruct.h"
+#include "StructUtils/UserDefinedStruct.h"
 #include "Kismet2/StructureEditorUtils.h"
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
